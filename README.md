@@ -7,7 +7,7 @@
 supplies that are on hand and ready to be given to the patients.
 
 
-2.files
+2. files
     src.main.resources
         design.pdf: the design of your database schema.
         create.sql: the create statement for your tables.
