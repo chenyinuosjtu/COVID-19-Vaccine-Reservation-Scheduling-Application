@@ -282,6 +282,8 @@ public class Scheduler {
         } catch (SQLException e) {
             System.out.println("Error occurred when getting availabilities");
             e.printStackTrace();
+        } finally {
+            cm.closeConnection();
         }
 
     }
@@ -614,6 +616,7 @@ public class Scheduler {
                 System.out.println("Error occurred when minusing doses");
                 e.printStackTrace();
             }
+
         }
         // System.out.println("Doses updated!");
     }
@@ -685,6 +688,8 @@ public class Scheduler {
             } catch (SQLException e) {
                 System.out.println("Error occurred when show appointments");
                 e.printStackTrace();
+            } finally {
+                cm.closeConnection();
             }
         }
         // caregiver login
@@ -706,6 +711,8 @@ public class Scheduler {
             } catch (SQLException e) {
                 System.out.println("Error occurred when adding doses");
                 e.printStackTrace();
+            } finally {
+                cm.closeConnection();
             }
         }
     }
